@@ -1,0 +1,64 @@
+[tool.poetry]
+name = "poser"
+version = "0.0.1"
+description = "A pipeline to do docking in Vina followed by ligand fingerprint screening."
+authors = ["Danila Iakovlev <iakovlevda@biocad.ru>", "Nikina Efimenko <efimenko@biocad.ru>", "Ilya Krainov <krainov@biocad.ru>"]
+readme = "README.md"
+packages = [{ include = "poser" }]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+parmed = "^4.3.0"
+vina = "^1.2.7"
+pydantic = "^2.11.7"
+jupyter = "^1.1.1"
+meeko = "^0.6.1"
+rdkit = "^2025.3.3"
+pandas = "^2.3.0"
+
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.3.0"
+black = "^25.1.0"
+isort = "^6.0.1"
+mypy = { version = "^1.16.1", extras = ["reports"] }
+
+[tool.isort]
+profile = "black"
+line_length = 100
+src_paths = ["poser"]
+skip_gitignore = true
+filter_files = true
+
+[tool.black]
+line-length = 100
+exclude = '''
+/(
+\.git
+| \.hg
+| \.mypy_cache
+| \.tox
+| \.venv
+| _build
+| build
+| dist
+)/
+'''
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+
+[[tool.mypy.overrides]]
+module = [
+  "nest_asyncio.*",
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
