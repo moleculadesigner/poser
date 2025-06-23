@@ -11,15 +11,12 @@ from zipfile import ZipFile
 from subprocess import run
 from tempfile import TemporaryDirectory
 
-
 import pandas as pd
 from meeko import MoleculePreparation, PDBQTMolecule, PDBQTWriterLegacy, RDKitMolCreate
 from rdkit import Chem
 from rdkit.Chem import AllChem
 from vina import Vina
 
-
-#from .grid_preparation import DoubleBox
 from .ligand import Ligand
 
 class PDBQTError(ValueError):

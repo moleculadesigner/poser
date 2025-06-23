@@ -6,16 +6,12 @@ medchem_pipelines.docking.ifd_mmgbsa_pipeline
 Functions to run combined IFD -> MM/GBSA pipeline with pose analysis
 """
 
-import asyncio
-import io
 import pickle
 import warnings
-from collections import defaultdict
 from pathlib import Path
-from typing import DefaultDict, Optional
+from typing import Optional
 import datetime
 
-import oneq as oq
 import pandas as pd
 from IPython.core.display import Image
 from pydantic import BaseModel, ConfigDict

@@ -7,11 +7,8 @@ poser.ligand.
 A ligand data container definition
 """
 
-import io
 import warnings
-from collections import defaultdict
 from pathlib import Path
-from typing import DefaultDict
 
 import pandas as pd
 import parmed
