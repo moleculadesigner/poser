@@ -4,7 +4,6 @@ __pycache__
 *.code-workspace
 .DS_Store
 dist
-notsave_*
 .ipynb_checkpoints
 oneq-token.txt
 .Trash*

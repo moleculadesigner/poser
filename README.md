@@ -40,6 +40,6 @@ pipeline.run()
 ```
 
 ## Authors
-Danila Iakovlev, Biocad
-Nikita Efimenko, Biocad
-Ilya Krainov, Biocad
+- Danila Iakovlev, Biocad
+- Nikita Efimenko, Biocad
+- Ilya Krainov, Biocad
